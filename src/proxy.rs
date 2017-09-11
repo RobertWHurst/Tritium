@@ -6,5 +6,5 @@ impl Proxy {
         Self {}
     }
 
-    pub fn start(&mut self) {}
+    pub fn run(&mut self) {}
 }
