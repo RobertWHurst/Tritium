@@ -1,0 +1,6 @@
+[package]
+name = "tritium"
+version = "0.1.0"
+authors = ["Robert Hurst <rhurst@e-xact.com>"]
+
+[dependencies]
