@@ -3,4 +3,12 @@ name = "tritium"
 version = "0.1.0"
 authors = ["Robert Hurst <rhurst@e-xact.com>"]
 
+[lib]
+name = "tritium"
+path = "src/lib.rs"
+
+[[bin]]
+name = "tritium"
+path = "src/bin.rs"
+
 [dependencies]
