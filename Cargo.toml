@@ -11,6 +11,6 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "tritium"
-path = "src/bin.rs"
+path = "src/bin/main.rs"
 
 [dependencies]
