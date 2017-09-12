@@ -1,7 +1,11 @@
 [package]
 name = "tritium"
 version = "0.1.0"
-authors = ["Robert Hurst <rhurst@e-xact.com>"]
+authors = [
+  "Robert Hurst <robertwhurst@gmail.com>",
+  "Marcus Heese",
+  "Brandyn Prasad"
+]
 description = "Tritium is a proxy built with the goal of being ultra fast, easy to use, and feature rich"
 license = "MIT"
 
@@ -14,3 +18,4 @@ name = "tritium"
 path = "src/bin/main.rs"
 
 [dependencies]
+clap = "2.26"
