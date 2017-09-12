@@ -43,4 +43,12 @@ mod tests {
         let mut proxy = Proxy::new();
         proxy.load_config("my_config");
     }
+
+    #[test]
+    fn can_get_config_path() {
+        let mut proxy = Proxy::new();
+
+        proxy.load_config("my_config");
+        let _: &PathBuf = proxy.config_path().unwrap();
+    }
 }
