@@ -1,25 +1,26 @@
+use config::Config;
 use std::path::PathBuf;
 
 pub struct Proxy {
-    config_path: Option<PathBuf>,
+    config: Option<Config>,
 }
 
 impl Proxy {
     pub fn new() -> Self {
-        Self { config_path: None }
+        Self { config: None }
     }
 
     pub fn load_config<P>(&mut self, config_path: P)
     where
         P: Into<PathBuf>,
     {
-        self.config_path = Some(config_path.into());
+        self.config = Some(Config::from_path(config_path));
         // TODO: here we will want to call instance methods on Proxy in order to configure the
         // instance.
     }
 
-    pub fn config_path(&self) -> Option<&PathBuf> {
-        self.config_path.as_ref()
+    pub fn config(&self) -> Option<&Config> {
+        self.config.as_ref()
     }
 
     pub fn run(&mut self) {
@@ -49,6 +50,6 @@ mod tests {
         let mut proxy = Proxy::new();
 
         proxy.load_config("my_config");
-        let _: &PathBuf = proxy.config_path().unwrap();
+        let _: &Config = proxy.config().unwrap();
     }
 }
