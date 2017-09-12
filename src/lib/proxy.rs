@@ -28,3 +28,19 @@ impl Proxy {
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn can_create_proxy_with_new() {
+        let _: Proxy = Proxy::new();
+    }
+
+    #[test]
+    fn can_set_config_path_with_load_config() {
+        let mut proxy = Proxy::new();
+        proxy.load_config("my_config");
+    }
+}

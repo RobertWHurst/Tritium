@@ -11,7 +11,7 @@ license = "MIT"
 
 [lib]
 name = "tritium"
-path = "src/lib.rs"
+path = "src/lib/lib.rs"
 
 [[bin]]
 name = "tritium"
